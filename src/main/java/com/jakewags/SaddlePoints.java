@@ -1,4 +1,4 @@
-package com.jakewagoner;
+package com.jakewags;
 
 /*
 Write a program to search for the "saddle points" in a 5 by 5 array of integers.
