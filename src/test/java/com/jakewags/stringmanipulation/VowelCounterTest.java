@@ -21,6 +21,13 @@ class VowelCounterTest {
 
         String four = null;
         assertEquals(-1, VowelCounter.numVowels(four));
+
+        // y vowel testing
+        String five = "you yes yellow yolo my";
+        assertEquals(8, VowelCounter.numVowels(five));
+
+        String six = "crypt dry fly gym fly fry gypsy try";
+        assertEquals(9, VowelCounter.numVowels(six));
     }
 
 }

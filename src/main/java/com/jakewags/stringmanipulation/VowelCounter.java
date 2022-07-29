@@ -6,11 +6,20 @@ public class VowelCounter {
 
         // a e i o u
         String vowels = "aeiou";
-        char[] charArr = s.toCharArray();
+        String[] splitArr = s.split(" ");
         int vowelCounter = 0;
 
-        for (char c : charArr) {
-            if (vowels.indexOf(c) >= 0) vowelCounter++;
+        for (String st : splitArr) {
+            char[] charArr = st.toCharArray();
+            int counter = vowelCounter;
+            for (char c : charArr) {
+                if (vowels.indexOf(c) >= 0) vowelCounter++;
+            }
+            if (vowelCounter == counter) {
+                for (char c : charArr) {
+                    if (c == 'y') vowelCounter++;
+                }
+            }
         }
 
         return vowelCounter;
